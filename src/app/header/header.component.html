@@ -1,0 +1,45 @@
+<div class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
+        <div class="container">
+          <a class="navbar-brand" rel="nofollow" target="_blank" href="#" style="text-transform: uppercase;"> LMS.COM</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+    
+            <ul class="navbar-nav ml-auto">
+    
+              <li class="nav-item " *ngIf="isLoggedIn == false">
+                <a class="nav-link" routerLink='/allCourses'>Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li class="nav-item" *ngIf="isLoggedIn == true">
+                <a class="nav-link" routerLink='/coachHome'>My Courses</a>
+              </li>
+    
+              <li class="nav-item" *ngIf="isLoggedIn == false">
+                <a class="nav-link" routerLink='/search'>Search</a>
+              </li>
+
+              <li class="nav-item" *ngIf="isLoggedIn == true">
+                <a class="nav-link" routerLink='/addCourse'>Add Course</a>
+              </li>
+    
+              <li class="nav-item" *ngIf="isLoggedIn == false">
+                <a class="nav-link" routerLink='/login'>Log In</a>
+              </li>
+    
+              <li class="nav-item" *ngIf="isLoggedIn == false">
+                <button class="nav-button" routerLink='/register'>Sign Up</button>
+              </li>
+
+              <li class="nav-item" *ngIf="isLoggedIn == true">
+                <a class="nav-link" routerLink='/logout'>Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>

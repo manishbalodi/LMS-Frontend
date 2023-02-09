@@ -1,0 +1,14 @@
+.outer{
+    margin-left: 450px;
+
+}
+.warning{
+    margin-top: 50px;
+}
+P{
+    margin-top: 20px;
+    color: red;
+}
+input[type="radio"]{
+    margin: 0 10px 0 10px;
+  }

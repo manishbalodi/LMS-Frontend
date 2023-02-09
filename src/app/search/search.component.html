@@ -1,0 +1,69 @@
+<div class="outer" >
+    <form  [formGroup]="searchFormData" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col=xs-12">
+          <div class="form-group">
+            <label for="name">Category*</label>
+            <input
+              type="text"
+              id="courseCategory"
+              class="form-control"
+              formControlName="courseCategory"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col=xs-12">
+          <div class="form-group">
+            <label for="name">Max Duration</label>
+            <input
+              type="number"
+              id="courseDuration"
+              class="form-control"
+              formControlName="courseDuration"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col=xs-12">
+            <button type="submit" [disabled]=!searchFormData.valid class="btn btn-success " >Search</button>
+        </div>
+    </div>
+    <div id="warning" class="row" *ngIf="anyIssue == true">
+      <div class="col=xs-12">
+        <P>No Course found</P>
+      </div>
+    </div>
+    </form>
+    </div>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6" *ngFor="let course of courseList; let i = index;">
+            <div class="card mb-3 " style="max-width: 540px">
+                <div class="row no-gutters">
+                  <div class="col-md-12">
+                    <div class="card-body">
+                        <span>Name</span>
+                      <h5 class="card-title">{{course.courseName}}</h5>
+                      <span>Author</span>
+                      <h5 class="card-title">{{course.createdBy}}</h5>
+                      <span>Duration</span>
+                      <h5 class="card-title">{{course.courseDuration}}</h5>
+                      <span>Launch URL</span>
+                      <h5 class="card-title">{{course.courseLaunchUrl}}</h5>
+                      <p class="card-text">
+                        <small> {{course.courseDescription}} </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
