@@ -13,6 +13,11 @@
           </div>
         </div>
       </div>
+      <div *ngIf="registrationFormData.controls['userName'].invalid 
+      && (registrationFormData.controls['userName'].dirty 
+      || registrationFormData.controls['userName'].touched)"
+      >
+      <span>User Name can't be empty</span></div>
       
       <div class="row">
         <div class="col=xs-12">
@@ -27,6 +32,11 @@
           </div>
         </div>
       </div>
+      <div *ngIf="registrationFormData.controls['userEmail'].invalid 
+      && (registrationFormData.controls['userEmail'].dirty 
+      || registrationFormData.controls['userEmail'].touched)"
+      >
+      <span>Enter a valid Email</span></div>
     
       <div class="row">
         <div class="col=xs-12">
@@ -41,7 +51,14 @@
           </div>
         </div>
       </div>
-      
+      <div *ngIf="registrationFormData.controls['userPassword'].invalid 
+      && (registrationFormData.controls['userPassword'].dirty 
+      || registrationFormData.controls['userPassword'].touched)"
+      > 
+      <span>Minimum characters 8</span><br>
+      <span>atleast one small and one capital latter</span><br>
+      <span>atleast one special character and one number</span></div>
+
       <div class="row">
         <div class="col=xs-12">
             <button type="submit" [disabled]=!registrationFormData.valid class="btn btn-success " >Sign-Up</button>

@@ -13,6 +13,10 @@
           </div>
         </div>
       </div>
+      <div *ngIf="courseFormData.controls['courseName'].invalid 
+      && (courseFormData.controls['courseName'].dirty 
+      || courseFormData.controls['courseName'].touched)"
+      ><span>Name should be min 10 characters</span></div>
       
       <div class="row">
         <div class="col=xs-12">
@@ -27,6 +31,10 @@
           </div>
         </div>
       </div>
+      <div *ngIf="courseFormData.controls['courseDuration'].invalid 
+      && (courseFormData.controls['courseDuration'].dirty 
+      || courseFormData.controls['courseDuration'].touched)" 
+      ><span>Course Duration is required</span></div>
     
       <div class="row">
         <div class="col=xs-12">
@@ -41,6 +49,10 @@
           </div>
         </div>
       </div>
+      <div *ngIf="courseFormData.controls['courseDescription'].invalid 
+      && (courseFormData.controls['courseDescription'].dirty 
+      || courseFormData.controls['courseDescription'].touched)" 
+      ><span>Description should be min 100 characters</span></div>
 
       <div class="row">
         <div class="col=xs-12">
@@ -55,6 +67,10 @@
           </div>
         </div>
       </div>
+      <div *ngIf="courseFormData.controls['courseTechnology'].invalid 
+      && (courseFormData.controls['courseTechnology'].dirty 
+      || courseFormData.controls['courseTechnology'].touched)" 
+      ><span>Technology can't be empty</span></div>
 
       <div class="row">
         <div class="col=xs-12">
@@ -69,6 +85,10 @@
           </div>
         </div>
       </div>
+      <div *ngIf="courseFormData.controls['courseLaunchUrl'].invalid 
+      && (courseFormData.controls['courseLaunchUrl'].dirty 
+      || courseFormData.controls['courseLaunchUrl'].touched)" 
+      ><span>Launch Url can't be empty</span></div>
       
       <div class="row">
         <div class="col=xs-12">

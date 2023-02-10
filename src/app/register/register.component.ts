@@ -25,6 +25,7 @@ export class RegisterComponent {
   ngOnInit(): void {
   }
 
+
   onSubmit(){
     let detailsData : register = {
       "userName": this.registrationFormData.value.userName,
